@@ -2,15 +2,14 @@ import {
   FiledType,
   FormFieldTypeEnum,
 } from '../type/form-builder.type';
-import { generateRandomId } from '../utils';
 
 export const fieldDefaultValue: Record<FormFieldTypeEnum, FiledType> = {
   [FormFieldTypeEnum.singleLineText]: {
     description: "",
     label: "Text",
-    name: "name_" + generateRandomId(),
+    name: "name_" + "",
     placeholder: "",
-    rowId: generateRandomId(),
+    rowId: "",
     columnId: "",
     value: "",
     variant: FormFieldTypeEnum.singleLineText,
@@ -18,9 +17,9 @@ export const fieldDefaultValue: Record<FormFieldTypeEnum, FiledType> = {
   [FormFieldTypeEnum.dropdown]: {
     description: "",
     label: "Select",
-    name: "name_" + generateRandomId(),
+    name: "name_" + "",
     placeholder: "",
-    rowId: generateRandomId(),
+    rowId: "",
     columnId: "",
     value: "",
     variant: FormFieldTypeEnum.dropdown,
@@ -28,9 +27,9 @@ export const fieldDefaultValue: Record<FormFieldTypeEnum, FiledType> = {
   [FormFieldTypeEnum.number]: {
     description: "",
     label: "Number",
-    name: "name_" + generateRandomId(),
+    name: "name_" + "",
     placeholder: "",
-    rowId: generateRandomId(),
+    rowId: "",
     columnId: "",
     value: "",
     variant: FormFieldTypeEnum.number,

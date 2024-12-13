@@ -256,7 +256,16 @@ const FormBuilder = () => {
       setFieldData((prev) =>
         prev.map((item) => {
           if (item.name === activeData.id) {
-            return { ...item, rowId: currentOverFieldData?.rowId as string };
+            const numberOfRowData = prev.filter(
+              (d) => d.rowId === item.rowId
+            ).length;
+            if (numberOfRowData < 2) {
+              setRowIds((row) => row.filter((idx) => idx !== item.rowId));
+            }
+            return {
+              ...item,
+              rowId: currentOverFieldData?.rowId as string,
+            };
           }
           return item;
         })
